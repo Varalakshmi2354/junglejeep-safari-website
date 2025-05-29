@@ -1,0 +1,11 @@
+    body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: black;
+    height: 200vh; 
+    background: linear-gradient(to bottom, #ff7e5f, #feb47b);
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  
