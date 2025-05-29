@@ -292,8 +292,6 @@ body, html {
       background-positon-x: 0px;
     }
   }
-  form{
-  
   input[type=text], select {
   width: 100%;
   padding: 12px 20px;
@@ -318,9 +316,10 @@ input[type=submit] {
 input[type=submit]:hover {
   background-color: #45a049;
 }
-
+form{
   border-radius: 5px;
-  background-color: #f2f2f2;
-  padding: 10% 20% 20% 20%;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+  background-color: #ba3b3b;
+  padding: 1% 2% 2% 2%;
+  box-shadow: 5px 5px 10px rgba(201, 24, 24, 0.2);
+  
   }
