@@ -1,123 +1,143 @@
-body, html {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 100vh;
-    font-family: Arial, sans-serif;
-    text-align: center;
-    scroll-behavior: smooth;
-    overflow: hidden; 
-    background-color: rgba(11, 0, 0, 0.2);
+body,
+html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100vh;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  scroll-behavior: smooth;
+  overflow: hidden;
+  background-color: rgba(11, 0, 0, 0.2);
 }
 
 .video-header {
-    position: fixed; 
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
-    /* z-index: -1;  */
+  position: fixed;
+  /* Keeps it full-screen */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  z-index: -1;
 }
 
 .bg-video {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 100vw;
-    height: 100vh;
-    object-fit: cover;
-    transform: translate(-50%, -50%);
-  
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  transform: translate(-50%, -50%);
+
 }
 
 
 .navbar {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.75) !important; 
-    font-size: large;
-    z-index: 10;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.75) !important;
+  font-size: large;
+  z-index: 10;
 }
 
 
 .navbar-nav .nav-link {
-    color: white !important;
-    transition: all 0.3s ease-in-out;
+  color: white !important;
+  transition: all 0.3s ease-in-out;
 }
 
 
 .navbar-nav .nav-link:hover {
-    background-color: rgba(250, 246, 246, 0.2);
-    color: rgb(241, 247, 245) !important;
+  background-color: rgba(250, 246, 246, 0.2);
+  color: rgb(241, 247, 245) !important;
 }
 
 
 .navbar-nav .nav-link:focus {
-    outline: none;
-    box-shadow: 0 0 5px yellow;
+  outline: none;
+  box-shadow: 0 0 5px yellow;
 }
 
 
 .navbar-nav .nav-link.active {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 
 .video-overlay {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    text-align: center;
-    color: white;
-    transform: translate(-50%, -50%);
-    z-index: 2;
-    padding: 2rem;
-    pointer-events: all;
-    font-size: 2.5rem;
-    font-weight: bold;
-    line-height: 1.4;
-    animation: fadeIn 1.5s ease-in;
-    pointer-events: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  text-align: center;
+  color: white;
+  transform: translate(-50%, -50%);
   z-index: 2;
-    
+  padding: 2rem;
+  font-size: 2.5rem;
+  font-weight: bold;
+  line-height: 1.4;
+  animation: fadeIn 1.5s ease-in;
+
 }
 
 .video-overlay h1 {
-    font-size: 2.5rem;
-    font-weight: bold;
-    line-height: 1.4;
-    
+  font-size: 2.5rem;
+  font-weight: bold;
+  line-height: 1.4;
+
 }
 
 .video-overlay h1 span {
-    color: #00ffb3;
+  color: #00ffb3;
 }
 
 .video-overlay em {
-    font-style: italic;
-    font-weight: bold;
+  font-style: italic;
+  font-weight: bold;
 }
 
 .video-overlay .btn {
-    margin-top: 20px;
-    font-weight: bold;
-    animation: fadeInScale 2s ease-in;
+  margin-top: 20px;
+  font-weight: bold;
+  animation: fadeInScale 2s ease-in;
+
   margin-top: 20px;
   font-weight: bold;
   z-index: 100;
 }
+
 .video-film {
   position: absolute;
   top: 0;
   left: 0;
   height: 100%;
   width: 100%;
-  background: rgba(2, 0, 0, 0.25); 
-  z-index: -2;
+  background: rgba(2, 0, 0, 0.25);
+  /* dark transparent layer */
+  z-index: 1;
 }
+
+.services-section {
+  background-color: #000000;
+  /* light gray background for this page only */
+  padding-top: 100px;
+  /* pushes content below navbar */
+  min-height: 100vh;
+}
+
+.text-custom {
+  color: #e2df97;
+  /* sea green or any color you like */
+  padding-top: 40px;
+  /* space above */
+  padding-bottom: 20px;
+  font-weight: 700;
+}
+
 .service-card {
   position: relative;
   overflow: hidden;
@@ -142,20 +162,22 @@ body, html {
 .overlay-text {
   position: absolute;
   bottom: 0;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.6), transparent);
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.5), transparent);
   color: #fff;
-  padding: 20px;
+  padding: 30px 20px 50px;
   width: 100%;
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+  text-align: center;
   border-radius: 20px;
 }
 
 .overlay-text h5 {
   font-weight: bold;
 }
+
 @keyframes fadeIn {
     from {
       opacity: 0;
@@ -248,28 +270,28 @@ body, html {
   }
   
   .wave#wave1 {
-    z-index: 10;
+    z-index: 1000;
     opacity: 1;
     bottom: 0;
     animation: animateWaves 4s linear infinite;
   }
   
   .wave#wave2 {
-    z-index: 9;
+    z-index: 999;
     opacity: 0.5;
     bottom: 10px;
     animation: animate 4s linear infinite !important;
   }
   
   .wave#wave3 {
-    z-index: 10;
+    z-index: 1000;
     opacity: 0.2;
     bottom: 15px;
     animation: animateWaves 3s linear infinite;
   }
   
   .wave#wave4 {
-    z-index: 9;
+    z-index: 999;
     opacity: 0.7;
     bottom: 20px;
     animation: animate 3s linear infinite;
@@ -292,25 +314,123 @@ body, html {
       background-positon-x: 0px;
     }
   }
-  input[type=text], select {
-  width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
+  
+.testimonial-section {
+  background: url('images/bg3.jpeg') center/cover no-repeat;
+  min-height: 100vh;
+  /* make it fill the full screen */
+  padding: 80px 20px;
+  color: #fff;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-input[type=submit] {
-  width: 100%;
-  background-color: #4CAF50;
+.testimonial-section h2 {
+  font-size: 2.5rem;
+  font-weight: 300;
+}
+
+.testimonial-card {
+  background: rgba(0, 0, 0, 0.4);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  height: 100%;
+}
+
+.testimonial-card .stars {
+  color: #ffd700;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.testimonial-card p {
+  font-size: 0.95rem;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+.testimonial-card h6 {
+  font-weight: bold;
+  margin: 0;
+}
+
+body.about-page {
+  background-color: #000;
   color: white;
-  padding: 14px 20px;
-  margin: 8px 0;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
+  font-family: 'Poppins', sans-serif;
+}
+
+.about-section {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 60px;
+  padding: 100px 80px;
+  min-height: 100vh;
+
+  /* Background image */
+  background: url('images/background.png') center center/cover no-repeat;
+  color: #fff;
+  z-index: 1;
+  overflow: hidden;
+}
+.about-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6); /* black film */
+  z-index: 0;
+}
+
+
+.about-images {
+  width: 500px;
+  height: 500px;
+  overflow: hidden;
+  position: relative;
+  border-radius: 20px;
+  flex-shrink: 0;
+  margin-left: 0; 
+  z-index: 1;
+}
+
+.about-images img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  border-radius: 20px;
+}
+
+.about-images img.active {
+  opacity: 1;
+}
+
+.about-text {
+  width: 45%;
+  font-family: 'Poppins', sans-serif;
+  color: #fff;
+  z-index: 1;
+}
+
+.about-text h2 {
+  font-weight: 700;
+  margin-bottom: 20px;
+  font-size: 2rem;
+}
+
+.about-text p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #ddd;
 }
 
 input[type=submit]:hover {
