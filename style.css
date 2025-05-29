@@ -19,7 +19,7 @@ html {
   width: 100%;
   height: 100vh;
   overflow: hidden;
-  z-index: -1;
+    /* z-index: -1;  */
 }
 
 .bg-video {
@@ -77,10 +77,13 @@ html {
   transform: translate(-50%, -50%);
   z-index: 2;
   padding: 2rem;
+    pointer-events: all;
   font-size: 2.5rem;
   font-weight: bold;
   line-height: 1.4;
   animation: fadeIn 1.5s ease-in;
+    pointer-events: auto;
+  z-index: 2;
 
 }
 
@@ -117,25 +120,7 @@ html {
   height: 100%;
   width: 100%;
   background: rgba(2, 0, 0, 0.25);
-  /* dark transparent layer */
-  z-index: 1;
-}
-
-.services-section {
-  background-color: #000000;
-  /* light gray background for this page only */
-  padding-top: 100px;
-  /* pushes content below navbar */
-  min-height: 100vh;
-}
-
-.text-custom {
-  color: #e2df97;
-  /* sea green or any color you like */
-  padding-top: 40px;
-  /* space above */
-  padding-bottom: 20px;
-  font-weight: 700;
+  z-index: -2;
 }
 
 .service-card {
@@ -270,28 +255,28 @@ html {
   }
   
   .wave#wave1 {
-    z-index: 1000;
+    z-index: 10;
     opacity: 1;
     bottom: 0;
     animation: animateWaves 4s linear infinite;
   }
   
   .wave#wave2 {
-    z-index: 999;
+    z-index: 9;
     opacity: 0.5;
     bottom: 10px;
     animation: animate 4s linear infinite !important;
   }
   
   .wave#wave3 {
-    z-index: 1000;
+    z-index: 10;
     opacity: 0.2;
     bottom: 15px;
     animation: animateWaves 3s linear infinite;
   }
   
   .wave#wave4 {
-    z-index: 999;
+    z-index: 9;
     opacity: 0.7;
     bottom: 20px;
     animation: animate 3s linear infinite;
@@ -314,7 +299,16 @@ html {
       background-positon-x: 0px;
     }
   }
-  
+  input[type=text], input[type=tel],input[type=date],select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
 .testimonial-section {
   background: url('images/bg3.jpeg') center/cover no-repeat;
   min-height: 100vh;
@@ -438,8 +432,16 @@ input[type=submit]:hover {
 }
 form{
   border-radius: 5px;
-  background-color: #ba3b3b;
   padding: 1% 2% 2% 2%;
-  box-shadow: 5px 5px 10px rgba(201, 24, 24, 0.2);
-  
+  box-shadow: 5px 5px 10px rgba(247, 245, 245, 0.2);
+  margin: 10% 10%;
+  background: rgba(255, 255, 255, 0.1);
+border-radius: 10px;
+backdrop-filter: blur(10px);
+-webkit-backdrop-filter: blur(10px);
+  }
+.cform {
+  background-image: url("images/bg3.jpeg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
   }
