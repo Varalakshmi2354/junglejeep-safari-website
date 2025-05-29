@@ -432,3 +432,14 @@ body.about-page {
   line-height: 1.6;
   color: #ddd;
 }
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+form{
+  border-radius: 5px;
+  background-color: #ba3b3b;
+  padding: 1% 2% 2% 2%;
+  box-shadow: 5px 5px 10px rgba(201, 24, 24, 0.2);
+  
+  }
