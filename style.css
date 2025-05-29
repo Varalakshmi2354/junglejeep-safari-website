@@ -4,8 +4,66 @@
     background-color: black;
     height: 200vh; 
     background: linear-gradient(to bottom, #ff7e5f, #feb47b);
+    opacity: 100;
   }
   html {
     scroll-behavior: smooth;
   }
-  
+  .video-header {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.bg-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -1;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+}
+
+.video-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  z-index: 2;
+  padding: 2rem;
+}
+
+.video-overlay h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  line-height: 1.4;
+}
+
+.video-overlay h1 span {
+  color: #00ffb3;
+}
+
+.video-overlay em {
+  font-style: italic;
+  font-weight: bold;
+}
+
+.video-overlay .btn {
+  margin-top: 20px;
+  font-weight: bold;
+}
+.video-film {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.25); /* dark transparent layer */
+  z-index: 1;
+}
