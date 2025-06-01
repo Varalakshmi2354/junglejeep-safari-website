@@ -7,7 +7,6 @@
     <title>Our Services - Safari</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    
 </head>
 
 <body class="about-page">
@@ -25,13 +24,13 @@
                         <a class="nav-link active" aria-current="page" href="index.html">Home</a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link" href="about.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link" href="services.html">Services</a>
                     </li>
                     <li class="nav-item">
-                    <li class="nav-item"><a class="nav-link" href="review.html">Reviews</a></li>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Pricing</a>
+                        <a class="nav-link" href="review.html">Reviews</a>
                     </li>
                 </ul>
             </div>
@@ -40,30 +39,24 @@
 
     <section class="about-section">
         <div class="about-overlay"></div>
-        <div class="about-images">
-            <img src="images/about1.png" class="active" alt="Safari 1">
-            <img src="images/about2.png" alt="Safari 2">
-            <img src="images/about3.png" alt="Safari 3">
-        </div>
+        <!-- Removed about-images div -->
         <div class="about-text">
             <h2>About Jungle Jeep Safari</h2>
-            <p>Experience the thrill of off-road adventures through breathtaking landscapes. Our guides are passionate
-                explorers who ensure you witness the raw beauty of nature — from rare wildlife to hidden waterfalls.</p>
-            <p>We believe in sustainable tourism and unforgettable journeys. Join us to escape the ordinary and dive
-                into the wild.</p>
+            <p>Our journey began with a passion for the wild. What started as weekend off-road adventures soon turned
+                into a full-fledged tour experience when our founder discovered the untapped beauty of Bhoothathankettu
+                and the surrounding forests. With nothing but a jeep, a love for nature, and a dream to share the untold
+                stories of the jungle, Jungle Safari Tours was born.</p>
+            <p>Today, we offer thrilling Jeep Safari rides, peaceful trekking paths, and comfortable stays — all
+                designed to immerse you in the raw and untouched beauty of nature. Our expert guides take you through
+                scenic trails, hidden waterfalls, and remote forest regions filled with wildlife, offering a rare
+                connection to the wild.</p>
+            <h5><strong>Jungle Safari Tours</strong></h5>
+            <p>Jeep Safari, Trekking & Stay<br>
+                Bhoothathankettu, Vadattupara, Idamalayar, Mamalakandam & Mankulam</p>
+            <p><span style="color: #f06292;">📞 9744518836</span></p>
         </div>
+
     </section>
-
-    <script>
-        const images = document.querySelectorAll(".about-images img");
-        let index = 0;
-
-        setInterval(() => {
-            images[index].classList.remove("active");
-            index = (index + 1) % images.length;
-            images[index].classList.add("active");
-        }, 5000); // 3 seconds
-    </script>
 
 </body>
 

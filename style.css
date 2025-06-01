@@ -122,6 +122,23 @@ html {
   background: rgba(2, 0, 0, 0.25);
   z-index: -2;
 }
+/*----------*/
+.services-section {
+  background-color: #000000;
+  /* light gray background for this page only */
+  padding-top: 100px;
+  /* pushes content below navbar */
+  min-height: 100vh;
+}
+
+.text-custom {
+  color: #e2df97;
+  /* sea green or any color you like */
+  padding-top: 40px;
+  /* space above */
+  padding-bottom: 20px;
+  font-weight: 700;
+}
 
 .service-card {
   position: relative;
@@ -162,7 +179,7 @@ html {
 .overlay-text h5 {
   font-weight: bold;
 }
-
+/*----------*/
 @keyframes fadeIn {
     from {
       opacity: 0;
