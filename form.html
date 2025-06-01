@@ -93,5 +93,46 @@
       </footer>
       <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
       <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+      <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const form = document.querySelector(".form");
+    
+    form.addEventListener("submit", function (event) {
+      event.preventDefault(); 
+      const firstName = document.getElementById("fname").value.trim();
+      const lastName = document.getElementById("lname").value.trim();
+      const email = document.getElementById("mail").value.trim();
+      const phone = document.getElementById("phno").value.trim();
+      const date = document.getElementById("date").value.trim();
+      const food = document.querySelector("select[name='food']").value;
+      const adults = document.getElementById("adults").value.trim();
+      const kids = document.getElementById("kids").value.trim();
+      const package = document.getElementById("package").value;
+
+      if (!firstName || !lastName || !email || !phone || !date || !food || !adults || !package) {
+        alert("Please fill in all required fields before submitting.");
+        return;
+      }
+      const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+      if (!emailPattern.test(email)) {
+        alert("Please enter a valid email address.");
+        return;
+      }
+      const phonePattern = /^[0-9]{10}$/;
+      if (!phonePattern.test(phone)) {
+        alert("Please enter a valid 10-digit phone number.");
+        return;
+      }
+
+      if (adults < 1) {
+        alert("There must be at least one adult.");
+        return;
+      }
+      alert("Form submitted successfully!");
+      form.submit();
+    });
+  });
+</script>
+
 </body>
 </html>

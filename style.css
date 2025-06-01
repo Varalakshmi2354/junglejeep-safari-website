@@ -499,7 +499,7 @@ form, select, input[type="date"] {
   z-index: 2000;
 }
 .footer {
-  position: relative;
+  position: fixed;
   z-index: 10; /* Lower value so it doesn't interfere */
 }
 input[type="submit"] {
