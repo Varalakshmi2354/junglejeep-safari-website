@@ -511,3 +511,96 @@ input[type="submit"] {
   cursor: pointer;
   font-size: 16px;
 }
+@media (max-width: 576px) {
+  .video-overlay h1 {
+    font-size: 1.5rem;
+  }
+
+  .video-overlay .btn {
+    font-size: 1rem;
+    padding: 10px 16px;
+  }
+
+  .about-section {
+    flex-direction: column;
+    gap: 30px;
+    padding: 60px 20px;
+  }
+
+  .about-text,
+  .about-images {
+    width: 100%;
+  }
+
+  .testimonial-section h2 {
+    font-size: 1.8rem;
+  }
+
+  .navbar {
+    font-size: medium;
+  }
+
+  .footer {
+    padding: 10px;
+    flex-direction: column;
+  }
+
+  .menu__link, .social-icon__link {
+    font-size: 1rem;
+  }
+
+  .form {
+    width: 95%;
+    margin: 10% auto;
+  }
+}
+
+@media (min-width: 577px) and (max-width: 768px) {
+  .about-section {
+    flex-direction: column;
+    gap: 40px;
+    padding: 70px 30px;
+  }
+
+  .about-text,
+  .about-images {
+    width: 100%;
+  }
+
+  .testimonial-section h2 {
+    font-size: 2.2rem;
+  }
+
+  .navbar {
+    font-size: large;
+  }
+
+  .form {
+    width: 90%;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .about-text {
+    width: 50%;
+  }
+
+  .about-images {
+    height: 300px;
+  }
+
+  .video-overlay h1 {
+    font-size: 2rem;
+  }
+}
+
+@media (min-width: 1440px) {
+  .about-text {
+    font-size: 1.2rem;
+  }
+
+  .testimonial-card {
+    max-width: 800px;
+    margin: auto;
+  }
+}
