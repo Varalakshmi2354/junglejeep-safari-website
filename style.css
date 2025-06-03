@@ -671,3 +671,6 @@ body.video-page .footer {
   z-index: 0;
   margin-top: 100vh;
 }
+.footer{
+  background: transparent;
+}
