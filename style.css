@@ -33,7 +33,8 @@ html {
 
 }
 
-
+/*------------*/
+/* Navbar container */
 .navbar {
   position: absolute;
   top: 0;
@@ -44,29 +45,48 @@ html {
   z-index: 10;
 }
 
+/* Toggle button (hamburger) */
+.navbar-toggler {
+  border-color: rgba(255, 255, 255, 0.5);
+}
 
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba%28255, 255, 255, 1%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+/* Navbar links */
 .navbar-nav .nav-link {
   color: white !important;
   transition: all 0.3s ease-in-out;
 }
-
 
 .navbar-nav .nav-link:hover {
   background-color: rgba(250, 246, 246, 0.2);
   color: rgb(241, 247, 245) !important;
 }
 
-
 .navbar-nav .nav-link:focus {
   outline: none;
   box-shadow: 0 0 5px yellow;
 }
 
-
 .navbar-nav .nav-link.active {
   font-weight: bold;
 }
 
+/* Mobile fix: collapsed navbar */
+@media (max-width: 576px) {
+  .navbar-collapse {
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 10px 20px;
+  }
+
+  .navbar-nav .nav-link {
+    padding: 10px 0;
+  }
+}
+
+/*------------*/
 
 .video-overlay {
   position: absolute;
